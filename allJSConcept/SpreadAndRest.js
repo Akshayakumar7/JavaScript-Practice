@@ -44,3 +44,29 @@ console.log(updatedPerson);
 ////////////////////////////////////////////////////////////////////////////////
 
 // ** Rest Operator **
+
+
+//  In Function Parameters (Rest Arguments)
+function sum(...numbers) {
+  return numbers.reduce((total, num) => total + num, 0);
+}
+
+console.log(sum(1, 2, 3, 4));
+
+
+
+// Collects the remaining elements into a new array.
+const [first, second, ...rest] = [10, 20, 30, 40, 50];
+console.log(first); 
+console.log(second); 
+console.log(rest);
+
+
+
+// Collects remaining properties into a new object.
+const personOne = { userName: "Alice", age: 25, city: "New York" };
+const { userName, ...details } = personOne;
+
+console.log(userName); 
+console.log(details);
+
